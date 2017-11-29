@@ -20,7 +20,7 @@
             "properties": { 
               "mode": "Incremental", 
               "templateLink": {
-                "uri": "[concat(variables('repoUri'),'/01.vnet.json')]",
+                "uri": "https://github.com/euronomad/daegit/tree/master/homework01/01Shared/01.vnet.json]",
                 "contentVersion": "1.0.0.0"
               }, 
               "parameters": { 
@@ -36,7 +36,7 @@
             "properties": { 
               "mode": "Incremental", 
               "templateLink": {
-                "uri": "[concat(variables('repoUri'),'/02.nic.json')]",
+                "uri": "https://github.com/euronomad/daegit/tree/master/homework01/01Shared/02.nic.json]",
                 "contentVersion": "1.0.0.0"
               }, 
               "parameters": { 
