@@ -47,7 +47,7 @@
               } 
             },
             "dependsOn": [
-                "minschoNet01"
+                "daekimNet01"
             ]
         },
         {
@@ -89,7 +89,7 @@
               } 
             },
             "dependsOn": [
-                "minschoNet01"
+                "daekimNet01"
             ]
         }
     ]
