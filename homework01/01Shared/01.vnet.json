@@ -23,7 +23,7 @@
                 "addressSpace": {
                     "addressPrefixes": [
                         "10.4.0.0/16",
-			            "192.168.4.0/16"
+			            "192.168.0.0/16"
                     ]
                 },
                 "subnets": [
