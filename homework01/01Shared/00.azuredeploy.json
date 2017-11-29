@@ -10,14 +10,14 @@
       }
     },
     "variables": {
-        "repoUri" : "https://github.com/euronomad/daegit/tree/master/homework01/01Shared/"
+        "repoUri":"https://raw.githubusercontent.com/msjo66/azureStudy/master/homework01/01Shared/"
     },
     "resources": [
         {
-            "apiVersion": "2017-05-10", 
-            "name": "daekimNet01", 
-            "type": "Microsoft.Resources/deployments", 
-            "properties": { 
+            "apiVersion": "2017-05-10",
+            "name": "daekimNet01",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
               "mode": "Incremental", 
               "templateLink": {
                 "uri": "[concat(variables('repoUri'),'01.vnet.json')]",
