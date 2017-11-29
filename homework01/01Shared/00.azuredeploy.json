@@ -15,7 +15,7 @@
     "resources": [
         {
             "apiVersion": "2017-05-10", 
-            "name": "minschoNet01", 
+            "name": "daekimNet01", 
             "type": "Microsoft.Resources/deployments", 
             "properties": { 
               "mode": "Incremental", 
@@ -68,7 +68,7 @@
               } 
             },
             "dependsOn": [
-                "minschoNet01"
+                "daekimNet01"
             ]
         },
         {
