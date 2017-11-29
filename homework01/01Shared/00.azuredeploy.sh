@@ -9,9 +9,9 @@ IFS=$'\n\t'
 usage() { echo "Usage: $0 -g <resourceGroupName> -n deploymentName" 1>&2; exit 1; }
 
 declare subscriptionId="7b13dc94-2b54-4cdf-a247-bbdebdb97f4f"
-declare resourceGroupName=""
+declare resourceGroupName="daekimHW01"
 declare resourceGroupLocation=koreacentral
-declare deploymentName=""
+declare deploymentName="dp20171129"
 
 # Initialize parameters specified from command line
 while getopts ":g:n:" arg; do
