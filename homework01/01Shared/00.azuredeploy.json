@@ -10,7 +10,7 @@
       }
     },
     "variables": {
-        "repoUri":"https://github.com/euronomad/daegit/blob/master/homework01/01Shared/"
+        "repoUri":"https://raw.githubusercontent.com/euronomad/daegit/master/homework01/01Shared/"
     },
     "resources": [
         {
