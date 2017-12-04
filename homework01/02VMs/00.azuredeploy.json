@@ -5,7 +5,13 @@
         "adminUserId": {
           "type": "string"
         },
-        "sshKeyData": {
+        "vaultResourceGroup" : {
+          "type": "string"
+        },
+        "vaultName" : {
+          "type": "string"
+        },
+        "secretName" : {
           "type": "string"
         }
     },
