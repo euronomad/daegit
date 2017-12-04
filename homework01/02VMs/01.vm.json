@@ -41,7 +41,7 @@
         }
     },
     "variables": {
-        "netRGName":"minschoNetRG",
+        "netRGName":"daekimHW05",
         "subscriptionId":"[subscription().subscriptionId]"
     },
     "resources": [
