@@ -24,7 +24,7 @@
             "type": "string"
         },
         "os_disk_size" : {
-            "defaultValue": 30,
+            "defaultValue": 100,
             "type": "int"
         },
         "adminUserId" : {
@@ -97,5 +97,11 @@
                 }
             }
         }
-    ]
+    ],
+    "outputs": {
+        "publicIPAddress":{
+            "value": "[reference(concat('/subscriptions/', variables('subscriptionId'), '/resourceGroups/', variables('netRGName'), '/providers/Microsoft.Network/networkInterfaces/', parameters('nic_name')),'2017-06-01').ipConfigurations[0].properties.publicIPAddress]",
+            "type": "object"
+        }
+    }
 }
