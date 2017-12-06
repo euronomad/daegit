@@ -8,10 +8,10 @@
         },
         "os_image_reference": {
             "defaultValue": {
-                    "publisher": "Canonical",
-                    "offer": "UbuntuServer",
-                    "sku": "16.04-LTS",
-                    "version": "latest"
+                "publisher": "OpenLogic",
+                "offer": "CentOS",
+                "sku": "7.3",
+                "version": "latest"
             },
             "type": "object"
         },
@@ -41,7 +41,7 @@
         }
     },
     "variables": {
-        "netRGName":"daekimHW05",
+        "netRGName":"daekimNETRG01",
         "subscriptionId":"[subscription().subscriptionId]"
     },
     "resources": [
