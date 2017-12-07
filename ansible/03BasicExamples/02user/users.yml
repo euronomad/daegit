@@ -1,5 +1,5 @@
 --- 
-- hosts: all 
+- hosts: webserver 
   tasks: 
   - name: Ensure ansible user exists 
     user: 
@@ -10,7 +10,7 @@
   - name: Ensure ansible user accepts the SSH key 
     authorized_key: 
       user: ansible 
-      key: "{{ lookup('file', '~/.ssh/minscho_ebay.com.pub') }}"
+      key: "{{ lookup('file', '~/.ssh/daekim_ebay.com.pub') }}"
       state: present 
     become: true
   - name: Ensure the ansible user is sudoer with no password required 
