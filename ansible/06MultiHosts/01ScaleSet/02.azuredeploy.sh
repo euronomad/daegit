@@ -42,5 +42,5 @@ az group deployment create \
 # ansible inventory에 넣으려면..
 pemFilePath=" ansible_ssh_private_key_file=/Users/daekim/.ssh/daekim_ebay.com"
 az vmss list-instance-public-ips \
---resource-group minschoTestRG01 \
+--resource-group daekimSSRG01 \
 --name mySet01 |jq -r '.[].dnsSettings.fqdn' | sed "s|$|$pemFilePath|" >> /etc/ansible/hosts
