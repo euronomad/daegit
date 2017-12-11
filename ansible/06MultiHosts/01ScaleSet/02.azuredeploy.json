@@ -40,7 +40,7 @@
       }
     },
     "variables": {
-        "repoUri" : "https://raw.githubusercontent.com/msjo66/azureStudy/master/ansible/06MultiHosts/01ScaleSet/"
+        "repoUri" : "https://raw.githubusercontent.com/euronomad/daegit/master/ansible/06MultiHosts/01ScaleSet/"
     },
     "resources": [
         {
