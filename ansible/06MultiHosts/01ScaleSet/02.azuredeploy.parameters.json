@@ -9,7 +9,7 @@
             "value": "daekimVaultRG01"
         },
         "vaultName": {
-            "value": "daekimVault"
+            "value": "daekimVault01"
         },
         "secretName": {
             "value": "daekimPub"
@@ -18,13 +18,13 @@
             "value": "mySet01"
         },
         "imgRG": {
-            "value": "deakimNetRG"
+            "value": "deakimNetRG01"
         },
         "imgName": {
             "value": "centOSWithCommonTask"
         },
         "netRGName": {
-            "value": "deakimNetRG"
+            "value": "deakimNetRG01"
         },
         "nicName": {
             "value": "mynic"
