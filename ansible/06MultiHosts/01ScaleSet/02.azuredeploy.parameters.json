@@ -18,13 +18,13 @@
             "value": "mySet01"
         },
         "imgRG": {
-            "value": "deakimNetRG01"
+            "value": "deakimNETRG01"
         },
         "imgName": {
             "value": "centOSWithCommonTask"
         },
         "netRGName": {
-            "value": "deakimNetRG01"
+            "value": "deakimNETRG01"
         },
         "nicName": {
             "value": "mynic"
