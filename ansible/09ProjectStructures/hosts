@@ -1,0 +1,4 @@
+[webserver]
+vm1.daekimss01.koreacentral.cloudapp.azure.com ansible_ssh_private_key_file=/Users/daekim/.ssh/daekim_ebay.com
+[dbserver]
+vm2.daekimss01.koreacentral.cloudapp.azure.com ansible_ssh_private_key_file=/Users/daekim/.ssh/daekim_ebay.com
