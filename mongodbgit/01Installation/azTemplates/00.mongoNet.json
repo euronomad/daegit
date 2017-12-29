@@ -97,7 +97,7 @@
                 "enableIPForwarding": false,
                 "primary": true
             },
-            "dependsOn" [
+            "dependsOn": [
                 "[parameters('publicip_name')]"
             ]
         }
