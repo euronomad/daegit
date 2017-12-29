@@ -1,4 +1,4 @@
-- shell: "lsscsi [5{{':'}}*{{':'}}*{{':'}}{{item}}|awk '{print $NF}'"
+- shell: "lsscsi [4{{':'}}*{{':'}}*{{':'}}{{item}}|awk '{print $NF}'"
   register: lsscsi_msg
   become: true
   with_items: '{{luns}}'

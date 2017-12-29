@@ -1,5 +1,4 @@
 ---
 - hosts: mongo
   roles:
-  - common
-  #- mongo
+    - common
