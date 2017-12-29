@@ -1,0 +1,31 @@
+---
+- hosts: mongo_configs
+  roles:
+  - common
+  tasks:
+  - name: run mongo_common tasks
+    include_role: 
+      name: mongo_common
+    vars:
+      makePart: false
+      luns: []
+      mountDisk : false
+      mkfs: false
+      fstype: xfs
+      logpath:  /mnt/resource/log
+      datapath: /mnt/resource/data
+      binding_port: 27017
+      mongouser: mongod
+      selinuxmode : false
+    tags: mongo_common
+  - name: run mongo_config tasks
+    include_role: 
+      name: mongo_config
+    vars:
+      startMongoConfig: true
+      setupreplica: true
+      replsetName: MyConfigRepl
+      logpath:  /mnt/resource/log
+      datapath: /mnt/resource/data
+      binding_port: 27017
+    tags: mongo_config

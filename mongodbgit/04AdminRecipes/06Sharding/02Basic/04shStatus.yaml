@@ -1,0 +1,38 @@
+--- Sharding Status ---
+  sharding version: {
+  	"_id" : 1,
+  	"minCompatibleVersion" : 5,
+  	"currentVersion" : 6,
+  	"clusterId" : ObjectId("5a444d469e8c00a90e80965c")
+  }
+  shards:
+        {  "_id" : "shard0000",  "host" : "minschoshard01:27017",  "state" : 1 }
+        {  "_id" : "shard0001",  "host" : "minschoshard02:27017",  "state" : 1 }
+        {  "_id" : "shard0002",  "host" : "minschoshard03:27017",  "state" : 1 }
+  active mongoses:
+        "3.6.0" : 1
+  autosplit:
+        Currently enabled: yes
+  balancer:
+        Currently enabled:  yes
+        Currently running:  no
+        Failed balancer rounds in last 5 attempts:  0
+        Migration Results for the last 24 hours:
+                No recent migrations
+  databases:
+        {  "_id" : "config",  "primary" : "config",  "partitioned" : true }
+                config.system.sessions
+                        shard key: { "_id" : 1 }
+                        unique: false
+                        balancing: true
+                        chunks:
+                                shard0000	1
+                        { "_id" : { "$minKey" : 1 } } -->> { "_id" : { "$maxKey" : 1 } } on : shard0000 Timestamp(1, 0)
+        {  "_id" : "myShardedDB",  "primary" : "shard0000",  "partitioned" : true }
+                myShardedDB.people
+                        shard key: { "language" : 1 }
+                        unique: false
+                        balancing: true
+                        chunks:
+                                shard0000	1
+                        { "language" : { "$minKey" : 1 } } -->> { "language" : { "$maxKey" : 1 } } on : shard0000 Timestamp(1, 0)

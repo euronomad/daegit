@@ -1,0 +1,78 @@
+{
+	"op" : "command",
+	"ns" : "test.mockdata",
+	"command" : {
+		"count" : "mockdata",
+		"query" : {
+			"first_name" : "Pam"
+		},
+		"fields" : {
+
+		},
+		"$db" : "test"
+	},
+	"keysExamined" : 0,
+	"docsExamined" : 100000,
+	"numYield" : 782,
+	"locks" : {
+		"Global" : {
+			"acquireCount" : {
+				"r" : NumberLong(1566)
+			}
+		},
+		"Database" : {
+			"acquireCount" : {
+				"r" : NumberLong(783)
+			}
+		},
+		"Collection" : {
+			"acquireCount" : {
+				"r" : NumberLong(783)
+			}
+		}
+	},
+	"responseLength" : 29,
+	"protocol" : "op_msg",
+	"millis" : 43,
+	"planSummary" : "COLLSCAN",
+	"execStats" : {
+		"stage" : "COUNT",
+		"nReturned" : 0,
+		"executionTimeMillisEstimate" : 33,
+		"works" : 100002,
+		"advanced" : 0,
+		"needTime" : 100001,
+		"needYield" : 0,
+		"saveState" : 782,
+		"restoreState" : 782,
+		"isEOF" : 1,
+		"invalidates" : 0,
+		"nCounted" : 10,
+		"nSkipped" : 0,
+		"inputStage" : {
+			"stage" : "COLLSCAN",
+			"filter" : {
+				"first_name" : {
+					"$eq" : "Pam"
+				}
+			},
+			"nReturned" : 10,
+			"executionTimeMillisEstimate" : 33,
+			"works" : 100002,
+			"advanced" : 10,
+			"needTime" : 99991,
+			"needYield" : 0,
+			"saveState" : 782,
+			"restoreState" : 782,
+			"isEOF" : 1,
+			"invalidates" : 0,
+			"direction" : "forward",
+			"docsExamined" : 100000
+		}
+	},
+	"ts" : ISODate("2017-12-22T02:17:54.297Z"),
+	"client" : "127.0.0.1",
+	"appName" : "MongoDB Shell",
+	"allUsers" : [ ],
+	"user" : ""
+}

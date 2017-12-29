@@ -1,0 +1,69 @@
+{
+	"queryPlanner" : {
+		"mongosPlannerVersion" : 1,
+		"winningPlan" : {
+			"stage" : "SINGLE_SHARD",
+			"shards" : [
+				{
+					"shardName" : "shard0000",
+					"connectionString" : "minschoshard01:27017",
+					"serverInfo" : {
+						"host" : "minschoshard01",
+						"port" : 27017,
+						"version" : "3.6.0",
+						"gitVersion" : "a57d8e71e6998a2d0afde7edc11bd23e5661c915"
+					},
+					"plannerVersion" : 1,
+					"namespace" : "myShardedDB.people",
+					"indexFilterSet" : false,
+					"parsedQuery" : {
+						"language" : {
+							"$in" : [
+								"Arabic",
+								"Norwegian"
+							]
+						}
+					},
+					"winningPlan" : {
+						"stage" : "FETCH",
+						"inputStage" : {
+							"stage" : "SHARDING_FILTER",
+							"inputStage" : {
+								"stage" : "IXSCAN",
+								"keyPattern" : {
+									"language" : 1
+								},
+								"indexName" : "language_1",
+								"isMultiKey" : false,
+								"multiKeyPaths" : {
+									"language" : [ ]
+								},
+								"isUnique" : false,
+								"isSparse" : false,
+								"isPartial" : false,
+								"indexVersion" : 2,
+								"direction" : "forward",
+								"indexBounds" : {
+									"language" : [
+										"[\"Arabic\", \"Arabic\"]",
+										"[\"Norwegian\", \"Norwegian\"]"
+									]
+								}
+							}
+						}
+					},
+					"rejectedPlans" : [ ]
+				}
+			]
+		}
+	},
+	"ok" : 1,
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1514443064, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	},
+	"operationTime" : Timestamp(1514443064, 1)
+}

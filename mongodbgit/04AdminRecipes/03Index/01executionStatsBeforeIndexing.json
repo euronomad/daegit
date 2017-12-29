@@ -1,0 +1,56 @@
+{
+	"queryPlanner" : {
+		"plannerVersion" : 1,
+		"namespace" : "mydb.mockdata",
+		"indexFilterSet" : false,
+		"parsedQuery" : {
+			"city" : {
+				"$eq" : "Singapore"
+			}
+		},
+		"winningPlan" : {
+			"stage" : "COLLSCAN",
+			"filter" : {
+				"city" : {
+					"$eq" : "Singapore"
+				}
+			},
+			"direction" : "forward"
+		},
+		"rejectedPlans" : [ ]
+	},
+	"executionStats" : {
+		"executionSuccess" : true,
+		"nReturned" : 1,
+		"executionTimeMillis" : 44,
+		"totalKeysExamined" : 0,
+		"totalDocsExamined" : 100000,
+		"executionStages" : {
+			"stage" : "COLLSCAN",
+			"filter" : {
+				"city" : {
+					"$eq" : "Singapore"
+				}
+			},
+			"nReturned" : 1,
+			"executionTimeMillisEstimate" : 32,
+			"works" : 100002,
+			"advanced" : 1,
+			"needTime" : 100000,
+			"needYield" : 0,
+			"saveState" : 781,
+			"restoreState" : 781,
+			"isEOF" : 1,
+			"invalidates" : 0,
+			"direction" : "forward",
+			"docsExamined" : 100000
+		}
+	},
+	"serverInfo" : {
+		"host" : "mongodbtest01.koreacentral.cloudapp.azure.com",
+		"port" : 27017,
+		"version" : "3.6.0",
+		"gitVersion" : "a57d8e71e6998a2d0afde7edc11bd23e5661c915"
+	},
+	"ok" : 1
+}

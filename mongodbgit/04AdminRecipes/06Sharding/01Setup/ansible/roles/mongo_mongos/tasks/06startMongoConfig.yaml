@@ -1,0 +1,23 @@
+---
+- name: copy mongos.service for systemd
+  template:
+    src: mongos.service.j2
+    dest: /usr/lib/systemd/system/mongos.service
+  become: true
+- name: link mongos.service for systemd
+  file:
+    src: /usr/lib/systemd/system/mongos.service
+    dest: /etc/systemd/system/multi-user.target.wants/mongos.service
+    state: link
+  become: true
+- name: copy configuration parameter
+  template:
+    src: mongos.conf.j2
+    dest: /etc/mongos.conf
+  become: true
+- name: start mongos
+  service:
+    name: mongos
+    state: started
+    enabled: true
+  become: true

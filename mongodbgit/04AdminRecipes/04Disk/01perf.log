@@ -1,0 +1,48 @@
+parsed options:
+{ recSizeKB: 8, nThreads: 12, fileSizeMB: 10000, r: true, mmf: false }
+creating test file size:10000MB ...
+1GB...
+2GB...
+3GB...
+4GB...
+5GB...
+6GB...
+7GB...
+8GB...
+9GB...
+testing...
+options:{ recSizeKB: 8, nThreads: 12, fileSizeMB: 10000, r: true, mmf: false }
+wthr 12
+new thread, total running : 1
+read:1 write:0
+19789 ops/sec 77 MB/sec
+19602 ops/sec 76 MB/sec
+19173 ops/sec 74 MB/sec
+19300 ops/sec 75 MB/sec
+18838 ops/sec 73 MB/sec
+19494 ops/sec 76 MB/sec
+19579 ops/sec 76 MB/sec
+19002 ops/sec 74 MB/sec
+new thread, total running : 2
+<---- output truncated --->
+new thread, total running : 12
+read:1 write:0
+read:1 write:0
+read:1 write:0
+read:1 write:0
+40544 ops/sec 158 MB/sec
+40237 ops/sec 157 MB/sec
+40463 ops/sec 158 MB/sec
+40463 ops/sec 158 MB/sec
+
+#### iostat -mx 2의 결과
+Linux 3.10.0-693.11.1.el7.x86_64 (mongodbtest01.koreacentral.cloudapp.azure.com) 	12/22/2017 	_x86_64_	(1 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           3.05    0.00    0.75    0.52    0.00   95.68
+
+Device:         rrqm/s   wrqm/s     r/s     w/s    rMB/s    wMB/s avgrq-sz avgqu-sz   await r_await w_await  svctm  %util
+sdb               0.00     0.00    0.17    0.01     0.01     0.00    66.25     0.00    4.17    4.26    1.38   1.86   0.03
+sdc               0.00     0.00    0.26    0.02     0.00     0.00    48.56     0.00   10.44   10.34   11.96   8.09   0.22
+sda               0.00     0.12    5.55    1.70     0.27     0.02    81.77     0.05    7.45    6.23   11.44   1.25   0.91
+sdd               0.00     0.01    0.21    0.13     0.01     0.00    45.90     0.00    8.43   10.34    5.31   5.34   0.18

@@ -1,0 +1,93 @@
+2017-12-26T12:09:07.923+0900 I NETWORK  [listener] connection accepted from 192.168.0.5:48146 #2 (1 connection now open)
+2017-12-26T12:09:07.924+0900 I NETWORK  [conn2] end connection 192.168.0.5:48146 (0 connections now open)
+2017-12-26T12:09:07.927+0900 I NETWORK  [listener] connection accepted from 192.168.0.5:48148 #3 (1 connection now open)
+2017-12-26T12:09:07.927+0900 I NETWORK  [conn3] received client metadata from 192.168.0.5:48148 conn: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.6.0" }, os: { type: "Linux", name: "CentOS Linux release 7.4.1708 (Core) ", architecture: "x86_64", version: "Kernel 3.10.0-693.11.1.el7.x86_64" } }
+2017-12-26T12:09:07.928+0900 I NETWORK  [listener] connection accepted from 192.168.0.5:48150 #4 (2 connections now open)
+2017-12-26T12:09:07.928+0900 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to minschomongo01:27017
+2017-12-26T12:09:07.928+0900 I NETWORK  [conn4] received client metadata from 192.168.0.5:48150 conn: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.6.0" }, os: { type: "Linux", name: "CentOS Linux release 7.4.1708 (Core) ", architecture: "x86_64", version: "Kernel 3.10.0-693.11.1.el7.x86_64" } }
+2017-12-26T12:09:07.932+0900 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to minschomongo01:27017, took 4ms (1 connections now open to minschomongo01:27017)
+2017-12-26T12:09:07.937+0900 I NETWORK  [listener] connection accepted from 192.168.0.9:60798 #5 (3 connections now open)
+2017-12-26T12:09:07.938+0900 I NETWORK  [conn5] end connection 192.168.0.9:60798 (2 connections now open)
+2017-12-26T12:09:07.940+0900 I NETWORK  [listener] connection accepted from 192.168.0.9:60800 #6 (3 connections now open)
+2017-12-26T12:09:07.940+0900 I NETWORK  [conn6] received client metadata from 192.168.0.9:60800 conn: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.6.0" }, os: { type: "Linux", name: "CentOS Linux release 7.4.1708 (Core) ", architecture: "x86_64", version: "Kernel 3.10.0-693.11.1.el7.x86_64" } }
+2017-12-26T12:09:07.940+0900 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to minschomongo02:27017
+2017-12-26T12:09:07.941+0900 I STORAGE  [replexec-0] createCollection: local.system.replset with no UUID.
+2017-12-26T12:09:07.943+0900 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to minschomongo02:27017, took 3ms (1 connections now open to minschomongo02:27017)
+2017-12-26T12:09:07.989+0900 I REPL     [replexec-0] New replica set config in use: { _id: "MyReplicaSet", version: 3, protocolVersion: 1, members: [ { _id: 0, host: "minschomongo01:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "minschomongo02:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "minschomongo03:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: -1, catchUpTakeoverDelayMillis: 30000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('5a3f5b51e873ee8ed4d0f6e5') } }
+2017-12-26T12:09:07.990+0900 I REPL     [replexec-0] This node is minschomongo03:27017 in the config
+2017-12-26T12:09:07.990+0900 I REPL     [replexec-0] transition to STARTUP2 from STARTUP
+2017-12-26T12:09:07.990+0900 I REPL     [replexec-0] Starting replication storage threads
+2017-12-26T12:09:07.991+0900 I REPL     [replexec-1] Member minschomongo01:27017 is now in state PRIMARY
+2017-12-26T12:09:07.991+0900 I REPL     [replexec-1] Member minschomongo02:27017 is now in state SECONDARY
+2017-12-26T12:09:07.992+0900 I STORAGE  [replexec-0] createCollection: local.temp_oplog_buffer with no UUID.
+2017-12-26T12:09:08.092+0900 I REPL     [replication-0] Starting initial sync (attempt 1 of 10)
+2017-12-26T12:09:08.092+0900 I STORAGE  [replication-0] Finishing collection drop for local.temp_oplog_buffer (no UUID).
+2017-12-26T12:09:08.097+0900 I STORAGE  [replication-0] createCollection: local.temp_oplog_buffer with no UUID.
+2017-12-26T12:09:08.192+0900 I REPL     [replication-0] sync source candidate: minschomongo02:27017
+2017-12-26T12:09:08.192+0900 I REPL     [replication-0] ******
+2017-12-26T12:09:08.192+0900 I REPL     [replication-0] creating replication oplog of size: 990MB...
+2017-12-26T12:09:08.192+0900 I STORAGE  [replication-0] createCollection: local.oplog.rs with no UUID.
+2017-12-26T12:09:08.238+0900 I STORAGE  [replication-0] Starting WiredTigerRecordStoreThread local.oplog.rs
+2017-12-26T12:09:08.238+0900 I STORAGE  [replication-0] The size storer reports that the oplog contains 0 records totaling to 0 bytes
+2017-12-26T12:09:08.238+0900 I STORAGE  [replication-0] Scanning the oplog to determine where to place markers for truncation
+2017-12-26T12:09:08.389+0900 I REPL     [replication-0] ******
+2017-12-26T12:09:08.389+0900 I STORAGE  [replication-0] dropAllDatabasesExceptLocal 1
+2017-12-26T12:09:08.389+0900 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to minschomongo02:27017
+2017-12-26T12:09:08.393+0900 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to minschomongo02:27017, took 4ms (1 connections now open to minschomongo02:27017)
+2017-12-26T12:09:08.394+0900 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to minschomongo02:27017
+2017-12-26T12:09:08.396+0900 I REPL     [replication-1] CollectionCloner::start called, on ns:admin.system.version
+2017-12-26T12:09:08.397+0900 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to minschomongo02:27017, took 3ms (2 connections now open to minschomongo02:27017)
+2017-12-26T12:09:08.399+0900 I STORAGE  [repl writer worker 6] createCollection: admin.system.version with provided UUID: 4ddab514-a4c1-4016-989d-6053c01a4831
+2017-12-26T12:09:08.446+0900 I INDEX    [repl writer worker 6] build index on: admin.system.version properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }
+2017-12-26T12:09:08.446+0900 I INDEX    [repl writer worker 6] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-26T12:09:08.448+0900 I COMMAND  [repl writer worker 8] setting featureCompatibilityVersion to 3.6
+2017-12-26T12:09:08.448+0900 I NETWORK  [repl writer worker 8] Skip closing connection for connection # 6
+2017-12-26T12:09:08.448+0900 I NETWORK  [repl writer worker 8] Skip closing connection for connection # 4
+2017-12-26T12:09:08.448+0900 I NETWORK  [repl writer worker 8] Skip closing connection for connection # 3
+2017-12-26T12:09:08.448+0900 I REPL     [repl writer worker 8] CollectionCloner ns:admin.system.version finished cloning with status: OK
+2017-12-26T12:09:08.487+0900 I REPL     [repl writer worker 8] CollectionCloner::start called, on ns:admin.system.keys
+2017-12-26T12:09:08.489+0900 I STORAGE  [repl writer worker 9] createCollection: admin.system.keys with provided UUID: e59d54f1-82f5-44d0-81e2-c6092a059be9
+2017-12-26T12:09:08.585+0900 I INDEX    [repl writer worker 9] build index on: admin.system.keys properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "admin.system.keys" }
+2017-12-26T12:09:08.585+0900 I INDEX    [repl writer worker 9] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-26T12:09:08.586+0900 I REPL     [repl writer worker 11] CollectionCloner ns:admin.system.keys finished cloning with status: OK
+2017-12-26T12:09:08.593+0900 I REPL     [replication-0] CollectionCloner::start called, on ns:config.system.sessions
+2017-12-26T12:09:08.594+0900 I STORAGE  [repl writer worker 14] createCollection: config.system.sessions with provided UUID: 08c9c297-5f35-4522-94d6-d79d0f749f4f
+2017-12-26T12:09:08.687+0900 I INDEX    [repl writer worker 14] build index on: config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 }
+2017-12-26T12:09:08.687+0900 I INDEX    [repl writer worker 14] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-26T12:09:08.737+0900 I INDEX    [repl writer worker 14] build index on: config.system.sessions properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "config.system.sessions" }
+2017-12-26T12:09:08.737+0900 I INDEX    [repl writer worker 14] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-26T12:09:08.738+0900 W REPL     [repl writer worker 7] _insertDocumentsCallback, but no documents to insert for ns:config.system.sessions
+2017-12-26T12:09:08.738+0900 I REPL     [repl writer worker 7] CollectionCloner ns:config.system.sessions finished cloning with status: OK
+2017-12-26T12:09:08.744+0900 I REPL     [repl writer worker 7] CollectionCloner::start called, on ns:config.transactions
+2017-12-26T12:09:08.752+0900 I STORAGE  [repl writer worker 3] createCollection: config.transactions with provided UUID: 15b2968f-f32a-47ed-a24e-1185fb0c2653
+2017-12-26T12:09:08.840+0900 I INDEX    [repl writer worker 3] build index on: config.transactions properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "config.transactions" }
+2017-12-26T12:09:08.840+0900 I INDEX    [repl writer worker 3] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-26T12:09:08.842+0900 W REPL     [repl writer worker 0] _insertDocumentsCallback, but no documents to insert for ns:config.transactions
+2017-12-26T12:09:08.842+0900 I REPL     [repl writer worker 0] CollectionCloner ns:config.transactions finished cloning with status: OK
+2017-12-26T12:09:08.848+0900 I REPL     [repl writer worker 0] Finished cloning data: OK. Beginning oplog replay.
+2017-12-26T12:09:08.849+0900 I REPL     [replication-1] No need to apply operations. (currently at { : Timestamp(1514257747, 1) })
+2017-12-26T12:09:08.850+0900 I COMMAND  [replication-0] Assigning UUID ed7df6f9-399f-4c6a-b108-1419cd942fa0 to collection local.system.rollback.id
+2017-12-26T12:09:08.850+0900 I COMMAND  [replication-0] Assigning UUID 2085714f-8e1d-4026-9160-f40526f78b7c to collection local.temp_oplog_buffer
+2017-12-26T12:09:08.850+0900 I COMMAND  [replication-0] Assigning UUID 68b288be-f849-403b-b260-365b2948714f to collection local.system.replset
+2017-12-26T12:09:08.850+0900 I COMMAND  [replication-0] Assigning UUID 196bc823-3346-4139-a8e5-cd4388cd6d4d to collection local.me
+2017-12-26T12:09:08.850+0900 I COMMAND  [replication-0] Assigning UUID daa6e4c6-1b14-402f-9310-93424b55f316 to collection local.startup_log
+2017-12-26T12:09:08.850+0900 I COMMAND  [replication-0] Assigning UUID 517a09cb-6978-4dd7-8e8e-cb759bcb7c4b to collection local.replset.minvalid
+2017-12-26T12:09:08.850+0900 I COMMAND  [replication-0] Assigning UUID a5c3a33b-8802-4272-ae09-df05bbca5029 to collection local.oplog.rs
+2017-12-26T12:09:08.851+0900 I ASIO     [NetworkInterfaceASIO-RS-0] Ending connection to host minschomongo02:27017 due to bad connection status; 1 connections to that host remain open
+2017-12-26T12:09:08.851+0900 I REPL     [replication-1] Finished fetching oplog during initial sync: CallbackCanceled: error in fetcher batch callback: oplog fetcher is shutting down. Last fetched optime and hash: { ts: Timestamp(0, 0), t: -1 }[0]
+2017-12-26T12:09:08.851+0900 I REPL     [replication-1] Initial sync attempt finishing up.
+2017-12-26T12:09:08.851+0900 I REPL     [replication-1] Initial Sync Attempt Statistics: { failedInitialSyncAttempts: 0, maxFailedInitialSyncAttempts: 10, initialSyncStart: new Date(1514257748090), initialSyncAttempts: [], fetchedMissingDocs: 0, appliedOps: 0, initialSyncOplogStart: Timestamp(1514257747, 1), initialSyncOplogEnd: Timestamp(1514257747, 1), databases: { databasesCloned: 2, admin: { collections: 2, clonedCollections: 2, start: new Date(1514257748395), end: new Date(1514257748593), elapsedMillis: 198, admin.system.version: { documentsToCopy: 1, documentsCopied: 1, indexes: 1, fetchedBatches: 1, start: new Date(1514257748396), end: new Date(1514257748487), elapsedMillis: 91 }, admin.system.keys: { documentsToCopy: 2, documentsCopied: 2, indexes: 1, fetchedBatches: 1, start: new Date(1514257748487), end: new Date(1514257748593), elapsedMillis: 106 } }, config: { collections: 2, clonedCollections: 2, start: new Date(1514257748593), end: new Date(1514257748848), elapsedMillis: 255, config.system.sessions: { documentsToCopy: 0, documentsCopied: 0, indexes: 2, fetchedBatches: 0, start: new Date(1514257748593), end: new Date(1514257748744), elapsedMillis: 151 }, config.transactions: { documentsToCopy: 0, documentsCopied: 0, indexes: 1, fetchedBatches: 0, start: new Date(1514257748744), end: new Date(1514257748848), elapsedMillis: 104 } } } }
+2017-12-26T12:09:08.851+0900 I STORAGE  [replication-1] Finishing collection drop for local.temp_oplog_buffer (2085714f-8e1d-4026-9160-f40526f78b7c).
+2017-12-26T12:09:08.934+0900 I REPL     [replication-1] initial sync done; took 0s.
+2017-12-26T12:09:08.934+0900 I REPL     [replication-1] transition to RECOVERING from STARTUP2
+2017-12-26T12:09:08.934+0900 I REPL     [replication-1] Starting replication fetcher thread
+2017-12-26T12:09:08.935+0900 I REPL     [replication-1] Starting replication applier thread
+2017-12-26T12:09:08.935+0900 I REPL     [replication-1] Starting replication reporter thread
+2017-12-26T12:09:08.935+0900 I REPL     [rsBackgroundSync] could not find member to sync from
+2017-12-26T12:09:08.936+0900 I REPL     [rsSync] transition to SECONDARY from RECOVERING
+2017-12-26T12:09:24.938+0900 I REPL     [rsBackgroundSync] sync source candidate: minschomongo01:27017
+2017-12-26T12:09:24.938+0900 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to minschomongo01:27017
+2017-12-26T12:09:24.941+0900 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to minschomongo01:27017, took 3ms (1 connections now open to minschomongo01:27017)
+2017-12-26T12:09:24.943+0900 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to minschomongo01:27017
+2017-12-26T12:09:24.944+0900 I STORAGE  [rsSync] createCollection: local.replset.oplogTruncateAfterPoint with generated UUID: 3ed7ea6f-b6e0-49f1-b5bb-0bc49def71b4
+2017-12-26T12:09:24.946+0900 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to minschomongo01:27017, took 3ms (2 connections now open to minschomongo01:27017)

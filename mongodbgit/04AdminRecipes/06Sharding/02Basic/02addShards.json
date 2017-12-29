@@ -1,0 +1,12 @@
+{
+	"shardAdded" : "shard0000",
+	"ok" : 1,
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1514440723, 3),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	},
+	"operationTime" : Timestamp(1514440723, 3)
+}

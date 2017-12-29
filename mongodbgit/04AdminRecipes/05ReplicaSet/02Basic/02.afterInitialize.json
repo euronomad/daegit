@@ -1,0 +1,53 @@
+{
+	"set" : "MyReplicaSet",
+	"date" : ISODate("2017-12-24T07:50:27.800Z"),
+	"myState" : 1,
+	"term" : NumberLong(1),
+	"heartbeatIntervalMillis" : NumberLong(2000),
+	"optimes" : {
+		"lastCommittedOpTime" : {
+			"ts" : Timestamp(1514101827, 1),
+			"t" : NumberLong(1)
+		},
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1514101827, 1),
+			"t" : NumberLong(1)
+		},
+		"appliedOpTime" : {
+			"ts" : Timestamp(1514101827, 1),
+			"t" : NumberLong(1)
+		},
+		"durableOpTime" : {
+			"ts" : Timestamp(1514101827, 1),
+			"t" : NumberLong(1)
+		}
+	},
+	"members" : [
+		{
+			"_id" : 0,
+			"name" : "minschomongo01:27017",
+			"health" : 1,
+			"state" : 1,
+			"stateStr" : "PRIMARY",
+			"uptime" : 326,
+			"optime" : {
+				"ts" : Timestamp(1514101827, 1),
+				"t" : NumberLong(1)
+			},
+			"optimeDate" : ISODate("2017-12-24T07:50:27Z"),
+			"electionTime" : Timestamp(1514101585, 2),
+			"electionDate" : ISODate("2017-12-24T07:46:25Z"),
+			"configVersion" : 1,
+			"self" : true
+		}
+	],
+	"ok" : 1,
+	"operationTime" : Timestamp(1514101827, 1),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1514101827, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
+}

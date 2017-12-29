@@ -1,0 +1,12 @@
+---
+- name: copy configuration parameter
+  template:
+    src: mongod.conf.j2
+    dest: /etc/mongod.conf
+  become: true
+- name: start mongod
+  service:
+    name: mongod
+    state: started
+    enabled: true
+  become: true

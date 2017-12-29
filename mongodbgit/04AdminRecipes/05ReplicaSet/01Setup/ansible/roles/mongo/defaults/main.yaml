@@ -1,0 +1,3 @@
+#setup mongo replica
+setupreplica: true
+replsetName: MyReplicaSet

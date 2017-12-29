@@ -1,0 +1,20 @@
+{
+	"ismaster" : true,
+	"msg" : "isdbgrid",
+	"maxBsonObjectSize" : 16777216,
+	"maxMessageSizeBytes" : 48000000,
+	"maxWriteBatchSize" : 100000,
+	"localTime" : ISODate("2017-12-28T05:59:59.214Z"),
+	"logicalSessionTimeoutMinutes" : 30,
+	"maxWireVersion" : 6,
+	"minWireVersion" : 0,
+	"ok" : 1,
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1514440793, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	},
+	"operationTime" : Timestamp(1514440793, 1)
+}

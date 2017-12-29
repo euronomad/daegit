@@ -1,0 +1,12 @@
+systemLog:
+  destination: file
+  logAppend: true
+  path: {{logpath}}/mongos.log
+processManagement:
+  fork: true
+  pidFilePath: '/var/run/mongodb/mongos.pid'
+net:
+  port: {{binding_port}}
+  bindIp: 0.0.0.0  # Listen to local interface only, comment to listen on all interfaces.
+sharding:
+  configDB: {{configServerList}}

@@ -1,0 +1,13 @@
+{
+	"info2" : "no configuration specified. Using a default configuration for the set",
+	"me" : "minschomongo01:27017",
+	"ok" : 1,
+	"operationTime" : Timestamp(1514101585, 1),
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1514101585, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	}
+}

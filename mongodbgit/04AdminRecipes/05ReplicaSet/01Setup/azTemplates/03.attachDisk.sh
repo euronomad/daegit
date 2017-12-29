@@ -1,0 +1,1 @@
+az vm disk attach --vm-name $1 --disk $2 --lun $3 --resource-group minschoMongoDBRG01

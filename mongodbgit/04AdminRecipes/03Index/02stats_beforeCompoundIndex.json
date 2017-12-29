@@ -1,0 +1,63 @@
+{
+	"executionSuccess" : true,
+	"nReturned" : 1,
+	"executionTimeMillis" : 0,
+	"totalKeysExamined" : 9,
+	"totalDocsExamined" : 9,
+	"executionStages" : {
+		"stage" : "FETCH",
+		"filter" : {
+			"first_name" : {
+				"$eq" : "Sara"
+			}
+		},
+		"nReturned" : 1,
+		"executionTimeMillisEstimate" : 0,
+		"works" : 10,
+		"advanced" : 1,
+		"needTime" : 8,
+		"needYield" : 0,
+		"saveState" : 0,
+		"restoreState" : 0,
+		"isEOF" : 1,
+		"invalidates" : 0,
+		"docsExamined" : 9,
+		"alreadyHasObj" : 0,
+		"inputStage" : {
+			"stage" : "IXSCAN",
+			"nReturned" : 9,
+			"executionTimeMillisEstimate" : 0,
+			"works" : 10,
+			"advanced" : 9,
+			"needTime" : 0,
+			"needYield" : 0,
+			"saveState" : 0,
+			"restoreState" : 0,
+			"isEOF" : 1,
+			"invalidates" : 0,
+			"keyPattern" : {
+				"city" : 1
+			},
+			"indexName" : "city_index",
+			"isMultiKey" : false,
+			"multiKeyPaths" : {
+				"city" : [ ]
+			},
+			"isUnique" : false,
+			"isSparse" : false,
+			"isPartial" : false,
+			"indexVersion" : 2,
+			"direction" : "forward",
+			"indexBounds" : {
+				"city" : [
+					"[\"Boston\", \"Boston\"]"
+				]
+			},
+			"keysExamined" : 9,
+			"seeks" : 1,
+			"dupsTested" : 0,
+			"dupsDropped" : 0,
+			"seenInvalidated" : 0
+		}
+	}
+}

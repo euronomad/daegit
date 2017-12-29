@@ -1,0 +1,58 @@
+{
+	"executionSuccess" : true,
+	"nReturned" : 18753,
+	"executionTimeMillis" : 33,
+	"totalKeysExamined" : 18753,
+	"totalDocsExamined" : 18753,
+	"executionStages" : {
+		"stage" : "FETCH",
+		"nReturned" : 18753,
+		"executionTimeMillisEstimate" : 32,
+		"works" : 18754,
+		"advanced" : 18753,
+		"needTime" : 0,
+		"needYield" : 0,
+		"saveState" : 147,
+		"restoreState" : 147,
+		"isEOF" : 1,
+		"invalidates" : 0,
+		"docsExamined" : 18753,
+		"alreadyHasObj" : 0,
+		"inputStage" : {
+			"stage" : "IXSCAN",
+			"nReturned" : 18753,
+			"executionTimeMillisEstimate" : 10,
+			"works" : 18754,
+			"advanced" : 18753,
+			"needTime" : 0,
+			"needYield" : 0,
+			"saveState" : 147,
+			"restoreState" : 147,
+			"isEOF" : 1,
+			"invalidates" : 0,
+			"keyPattern" : {
+				"language" : 1
+			},
+			"indexName" : "language_1",
+			"isMultiKey" : false,
+			"multiKeyPaths" : {
+				"language" : [ ]
+			},
+			"isUnique" : false,
+			"isSparse" : true,
+			"isPartial" : false,
+			"indexVersion" : 2,
+			"direction" : "forward",
+			"indexBounds" : {
+				"language" : [
+					"[\"French\", \"French\"]"
+				]
+			},
+			"keysExamined" : 18753,
+			"seeks" : 1,
+			"dupsTested" : 0,
+			"dupsDropped" : 0,
+			"seenInvalidated" : 0
+		}
+	}
+}

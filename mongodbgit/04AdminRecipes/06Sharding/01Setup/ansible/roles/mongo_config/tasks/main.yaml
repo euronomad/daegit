@@ -1,0 +1,5 @@
+---
+- name: start mongodb
+  include_tasks: 06startMongoConfig.yaml
+  tags: startMongoConfig
+  when: startMongoConfig

@@ -1,0 +1,26 @@
+---
+- name: "MOTD 바꾸기"
+  template:
+    src: motd.j2
+    dest: /etc/motd
+    owner: root
+    group: root
+    mode: 0644
+  become: true
+# dns host를 hostname으로 하면 mongo replica들이 서로 못찾으므로 생략
+#- name : "hostname을 dns host명과 일치시킴"
+#  hostname:
+#   name: "{{ inventory_hostname }}"
+#  become: true
+- name: "firewalld stop"
+  service:
+    name: firewalld
+    state: stopped
+    enabled: true
+  ignore_errors: true
+  become: true
+- name: "firewalld 삭제"
+  yum:
+    name: firewalld
+    state: absent
+  become: true

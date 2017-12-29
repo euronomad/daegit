@@ -1,0 +1,63 @@
+{
+	"executionSuccess" : true,
+	"nReturned" : 1,
+	"executionTimeMillis" : 0,
+	"totalKeysExamined" : 1,
+	"totalDocsExamined" : 1,
+	"executionStages" : {
+		"stage" : "FETCH",
+		"nReturned" : 1,
+		"executionTimeMillisEstimate" : 0,
+		"works" : 2,
+		"advanced" : 1,
+		"needTime" : 0,
+		"needYield" : 0,
+		"saveState" : 0,
+		"restoreState" : 0,
+		"isEOF" : 1,
+		"invalidates" : 0,
+		"docsExamined" : 1,
+		"alreadyHasObj" : 0,
+		"inputStage" : {
+			"stage" : "IXSCAN",
+			"nReturned" : 1,
+			"executionTimeMillisEstimate" : 0,
+			"works" : 2,
+			"advanced" : 1,
+			"needTime" : 0,
+			"needYield" : 0,
+			"saveState" : 0,
+			"restoreState" : 0,
+			"isEOF" : 1,
+			"invalidates" : 0,
+			"keyPattern" : {
+				"city" : 1,
+				"first_name" : 1
+			},
+			"indexName" : "city_1_first_name_1",
+			"isMultiKey" : false,
+			"multiKeyPaths" : {
+				"city" : [ ],
+				"first_name" : [ ]
+			},
+			"isUnique" : false,
+			"isSparse" : false,
+			"isPartial" : false,
+			"indexVersion" : 2,
+			"direction" : "forward",
+			"indexBounds" : {
+				"city" : [
+					"[\"Boston\", \"Boston\"]"
+				],
+				"first_name" : [
+					"[\"Sara\", \"Sara\"]"
+				]
+			},
+			"keysExamined" : 1,
+			"seeks" : 1,
+			"dupsTested" : 0,
+			"dupsDropped" : 0,
+			"seenInvalidated" : 0
+		}
+	}
+}
