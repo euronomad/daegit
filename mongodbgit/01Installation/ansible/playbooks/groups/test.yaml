@@ -1,4 +1,4 @@
 ---
-- hosts: [mongo]
+- hosts: mongo
   roles:
     - test
