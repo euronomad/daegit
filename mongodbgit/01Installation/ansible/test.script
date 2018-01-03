@@ -1,0 +1,21 @@
+use admin
+db.createUser( 
+{
+    user: "dba",
+    pwd: "dba123",
+    roles: [ { role: "root", db: "admin" } ]
+})
+
+
+mongo --port 27017 -u "dba" -p "dba123" --authenticationDatabase "admin"
+
+
+"keyData": "[parameters('sshKeyData')]",
+"keydata": {
+    "reference" : {
+        "keyVault" : {
+            "id": "[resourceId(subscription().subscriptionId,  parameters('vaultResourceGroup'), 'Microsoft.KeyVault/vaults', parameters('vaultName'))]"
+        },
+        "secretName": "[parameters('secretName')]"
+    }
+    }

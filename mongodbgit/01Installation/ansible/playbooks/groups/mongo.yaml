@@ -2,4 +2,4 @@
 - hosts: mongo
   roles:
   #- common
-  - mongo
+    - mongo

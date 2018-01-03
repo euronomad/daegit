@@ -13,4 +13,4 @@ logpath:  /data0/mongodb
 datapath: /data1/mongo
 binding_port: 27017
 mongouser: mongod
-mongouser_pubkey: /Users/minsoojo/.ssh/minscho_ebay.com.pub
+mongouser_pubkey: /Users/daekim/.ssh/daekim_ebay.com.pub

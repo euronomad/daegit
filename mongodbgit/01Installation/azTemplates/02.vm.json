@@ -29,24 +29,24 @@
         "adminUserId" : {
             "type": "string"
         },
-        "sshKeyData" : {
-            "type": "string"
-        },
         "nic_name": {
             "type": "string"
         },
         "customData": {
             "defaultValue": "Iwo=",
             "type": "string"
+        },
+        "netRGName" : {
+            "type": "string"
         }
     },
     "variables": {
-        "netRGName":"daekimNETRG01",
-        "subscriptionId":"[subscription().subscriptionId]"
+        "subscriptionId": "[subscription().subscriptionId]",
+        "valutKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCxJarXl7DR7o/tDLt2Ats0I5pnnHr34IvMxZt/RDjESSUdU8hKEUZ827DYvIAbk4nyJQ2K4judLa2RhBD8H1pKMf7ucHdLXaOKjhWxayOQnQtM2uy/DUFRdlNpxrzbNxjp6R6Qko5i375RI6TgquySTld2OpZWZHUZFTVzgVm20NoktCBSnYy6RIvmaZZTq4v6fjdyXs2I6Ai/auZfxQlSBvJHDJn5GgBNGTG7LsQNlcTd0h9v4a2T745P3stzhMqiHFn1BfGGPjN3ie+cW/HDQ6P1l+xt2wk82r8x8l+d/mTvtwgiZcbbKQzrEzztjusf9ZzQP8GfDRgFk2pC6KRqOAnmqFUyEVg98lWAqryMT5o/tSDEhVSix29npyeOLIpT+i/8gnxI+/BFThwR1z+/56XpRtq149rHqrghZN2v5YYukgjnxHNZmRXfi2kaWArx7cMQSvTTmyxCPej21IztDh8LtdezuTGHZzkjQ/AixE7xUPBjLMOepSTaJtJfBUwNrHHuncxb7v6rGPH0sbZ26uRysgC8vLCpRUjczDvv86ebrKZPg6ssY/6Ome7w+hXLa+4P56rJ8UfKitWADQ+e+Fll1IjK2ORxTsULAvGbamDKTnDxt0205rMo1NDC5qMpFSUAhyr6MhT1ppxOIo0yljZv9ZidyXukcdpuWemD2w== daekim@ebay.com"
     },
     "resources": [
         {
-            "comments": "mongodb test single instance minsoo cho",
+            "comments": "mongodb test single instance",
             "type": "Microsoft.Compute/virtualMachines",
             "name": "[parameters('vm_name')]",
             "apiVersion": "2017-03-30",
@@ -80,7 +80,7 @@
                             "publicKeys": [
                                 {
                                     "path": "[concat('/home/',parameters('adminUserId'),'/.ssh/authorized_keys')]",
-                                    "keyData": "[parameters('sshKeyData')]"
+                                    "keyData": "[variables('valutKey')]"
                                 }
                             ]
                         }
@@ -91,7 +91,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[concat('/subscriptions/', variables('subscriptionId'), '/resourceGroups/', variables('netRGName'), '/providers/Microsoft.Network/networkInterfaces/', parameters('nic_name'))]"
+                            "id": "[concat('/subscriptions/', variables('subscriptionId'), '/resourceGroups/', parameters('netRGName'), '/providers/Microsoft.Network/networkInterfaces/', parameters('nic_name'))]"
                         }
                     ]
                 }
@@ -100,7 +100,7 @@
     ],
     "outputs": {
         "publicIPAddress":{
-            "value": "[reference(concat('/subscriptions/', variables('subscriptionId'), '/resourceGroups/', variables('netRGName'), '/providers/Microsoft.Network/networkInterfaces/', parameters('nic_name')),'2017-06-01').ipConfigurations[0].properties.publicIPAddress]",
+            "value": "[reference(concat('/subscriptions/', variables('subscriptionId'), '/resourceGroups/', parameters('netRGName'), '/providers/Microsoft.Network/networkInterfaces/', parameters('nic_name')),'2017-06-01').ipConfigurations[0].properties.publicIPAddress]",
             "type": "object"
         }
     }

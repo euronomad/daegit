@@ -1,0 +1,15 @@
+# File name : HelloDevOpsWorld.yml
+---
+- hosts: all
+  tasks:
+   - shell: "echo {{ item }}"
+     with_items:
+      - "/dev/sda"
+      - "/dev/sdb"
+     register: lsscsi_msg
+     # 그냥 정보를 가져오는 것이니까, changed=0으로..
+     changed_when: lsscsi_msg.rc != 0
+     failed_when: lsscsi_msg.rc != 0
+   - debug: msg='{{lsscsi_msg}}'
+
+
