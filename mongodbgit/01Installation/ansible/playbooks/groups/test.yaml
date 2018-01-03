@@ -1,0 +1,4 @@
+---
+- hosts: [mongo]
+  roles:
+    - test
